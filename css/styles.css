@@ -1,0 +1,310 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #d6eaf8;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+header {
+  width: 100%;
+  height: 40px;
+  background-color: #154360;
+  color: white;
+  padding: 15px 0;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  margin-right: 20px;
+}
+
+h1 {
+  margin: 0;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+nav {
+  width: 100%;
+  height: 50px;
+  background-color: #1b4f72;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 70px;
+  z-index: 1000;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li a,
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  padding: 15px;
+  display: block;
+  transition: background-color 0.3s;
+}
+
+nav ul li a:hover,
+.footer-links a:hover {
+  background-color: #154360;
+}
+
+.container {
+  width: 80%;
+  max-width: 500px;
+  margin: auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.container.result {
+  width: 500px;
+}
+
+.container.result .results {
+  text-align: left;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+}
+
+.tabs span {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px;
+  font-weight: bold;
+  color: #1b4f72;
+}
+
+.tabs .active {
+  border-bottom: 2px solid #1b4f72;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container h2 {
+  margin-bottom: 5px;
+}
+
+label {
+  width: 100%;
+  margin: 0 0 15px 0;
+  text-align: left;
+  font-size: 11pt;
+}
+
+input,
+select {
+  width: calc(100% - 10px);
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+input:focus,
+select:focus {
+  border-color: #1b4f72;
+  outline: none;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.buttons button {
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: #5dade2;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.buttons button:hover {
+  background-color: #1b4f72;
+}
+
+main {
+  flex: 1;
+  overflow-y: auto;
+  margin-top: 120px;
+  padding: 20px 20px 20px 0;
+}
+
+footer {
+  width: 100%;
+  background-color: #154360;
+  color: white;
+  text-align: center;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  bottom: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 20px;
+  position: relative;
+}
+
+.footer-links {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-70%);
+  display: flex;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  padding: 15px 0;
+  margin: 0 10px;
+  display: block;
+  transition: background-color 0.3s;
+}
+
+.footer-links a:hover {
+  background-color: #154360;
+}
+
+footer .copyright {
+  position: absolute;
+  right: 55px;
+}
+
+footer .social-icons {
+  margin-top: 10px;
+}
+
+footer .social-icons a {
+  margin: 0 10px;
+  display: inline-block;
+}
+
+footer .social-icons img {
+  width: 20px;
+  height: 20px;
+}
+
+.table-container {
+  max-height: 400px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 18px;
+  text-align: left;
+  margin: 0;
+}
+
+table thead {
+  background-color: #5dade2;
+  color: black;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+table th,
+table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+}
+
+table th {
+  border-top: 0;
+}
+
+table tbody tr:nth-child(even) {
+  background-color: #d6eaf8;
+}
+
+table tbody tr:hover {
+  background-color: #aed6f1;
+}
+
+table tbody tr td a {
+  color: #1b4f72;
+  text-decoration: none;
+}
+
+table tbody tr td a:hover {
+  text-decoration: underline;
+}
+
+.welcome-section,
+.about-section {
+  background-color: white;
+  margin: 0 auto;
+  width: 350px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.welcome-section h2,
+.about-section h2 {
+  margin-top: 0;
+}
+.welcome-section h2,
+.about-section h2,
+.container h2 {
+  text-align: center;
+}
+
+.welcome-section p,
+.about-section p,
+.container ul p {
+  margin: 10px 0;
+}
+
+.contacts-section p {
+  margin: 5px 0;
+}
