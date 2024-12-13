@@ -1,12 +1,12 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "pension";
+$host = getenv("DATABASE_HOST");
+$dbname = getenv("DATABASE_NAME");
+$username = getenv("DATABASE_USER");
+$password = getenv("DATABASE_PASSWORD");
 
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+try {
+    $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch(PDOException $e) {
+    echo "Ошибка подключения: " . $e->getMessage();
 }
-?>
